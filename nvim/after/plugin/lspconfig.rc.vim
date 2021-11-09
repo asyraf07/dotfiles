@@ -101,7 +101,15 @@ nvim_lsp.tsserver.setup {
 }
 
 nvim_lsp.pyright.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+}
+
+nvim_lsp.intelephense.setup {
+  on_attach = on_attach,
+}
+
+nvim_lsp.bashls.setup {
+  on_attach = on_attach,
 }
 
 nvim_lsp.diagnosticls.setup {

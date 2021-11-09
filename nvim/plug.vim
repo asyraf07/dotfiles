@@ -6,6 +6,7 @@ call plug#begin()
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
 
 if has("nvim")
   Plug 'hoob3rt/lualine.nvim'
@@ -19,6 +20,7 @@ if has("nvim")
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'kyazdani42/nvim-tree.lua'
@@ -27,10 +29,25 @@ if has("nvim")
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'windwp/nvim-autopairs'
+  Plug 'b3nj5m1n/kommentary'
+  Plug 'lithammer/nvim-pylance'
+  Plug 'mattn/emmet-vim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 call plug#end()
+
+" Emmet-vim settings
+let g:user_emmet_mode='a' 
+let g:user_emmet_leader_key=','
+let g:user_emmet_settings = {
+\  'php': {
+\    'snippets': {
+\      'php': "<?php ${1} ?>",
+\      'phpp': "<?= ${1} ?>",
+\    },
+\  },
+\}
 

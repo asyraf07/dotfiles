@@ -30,11 +30,23 @@ lua <<EOF
       { name = 'nvim_lsp' },
     }, {
       { name = 'buffer' },
+    }, {
+      { name = 'cmp_tabnine' },
     }),
     formatting = {
       format = lspkind.cmp_format({with_text = false, maxwidth = 50})
     }
   })
+
+  local tabnine = require('cmp_tabnine.config')
+  tabnine:setup({
+          max_lines = 1000;
+          max_num_results = 20;
+          sort = true;
+    run_on_every_keystroke = true;
+    snippet_placeholder = '..';
+  })
+
 
   vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
 EOF
