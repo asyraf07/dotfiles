@@ -10,6 +10,7 @@ if !1 | finish | endif
 
 set nocompatible
 set number
+set relativenumber
 syntax enable
 set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
@@ -133,11 +134,16 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set background=dark
   " Use NeoSolarized
-  let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
-  colorscheme NeoSolarized
- " colorscheme gruvbox
+""  let g:neosolarized_termtrans=1
+""  runtime ./colors/NeoSolarized.vim
+""  colorscheme NeoSolarized
+  let g:gruvbox_contrast_dark = 'soft'
+  let g:gruvbox_transparent_bg=1
+  colorscheme gruvbox
+  hi! Normal ctermbg=NONE guibg=NONE
+""  hi! NonText ctermbg=NONE guibg=NONE
 endif
+
 
 "}}}
 

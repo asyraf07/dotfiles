@@ -1,0 +1,18 @@
+{
+  "tsserver.enableJavascript": true,
+  "javascript.format.enabled": true,
+
+  "snippets.ultisnips.directories": ["UltiSnips", "gosnippets/UltiSnips"],
+
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "python",
+    "markdown",
+    "javascript",
+    "typescript",
+    "json",
+    "php",
+    "go"
+  ]
+}
